@@ -11,6 +11,10 @@
 <script src="https://unpkg.com/@jspsych/plugin-browser-check@1.0.0"></script>
 <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
 
+//DataPipe plugin
+<script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+
+
 <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet"/>
 </head>
   <body></body>
@@ -24,6 +28,11 @@ var jsPsych = initJsPsych({
     window.location = "https://google.com"
   }
 });
+
+//DataPipe plugin
+const subject_id = jsPsych.randomization.randomID(10);
+const filename = `${subject_id}.csv`;
+            
 
 var wavs = ['Parisien.wav', 'Europeen.wav']
 
@@ -246,6 +255,15 @@ var end_number = {
   response_ends_trial: true,
 };
 
+//Datapipe plugin
+const save_data = {
+type: jsPsychPipe,
+action: "save",
+experiment_id: "wgjIR9ZWvB4L",
+filename: filename,
+data_string: ()=>jsPsych.data.get().csv()
+};
+
 // タイムラインを作成（これが重要！）
 var timeline = [
   preload,
@@ -262,6 +280,7 @@ var timeline = [
   Experiment_timeline,
   goodbye,
   end_number,
+  save_data,
 ];
 
 // 実験を実行
