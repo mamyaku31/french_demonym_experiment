@@ -1,4 +1,4 @@
-# Consentement éclairé 
+#  Consentement éclairé 
 
 # Une expérimentation sur la formation des gentilés
 
@@ -15,3 +15,31 @@
 ## Introduction sur cette expérimentation
 
 Cette expérimentation a but de ...
+
+---
+
+<div style="margin-top: 40px;">
+
+<a href="jsPsych.html" 
+   style="
+   padding: 12px 24px;
+   background-color: #2c7be5;
+   color: white;
+   text-decoration: none;
+   border-radius: 6px;
+   font-size: 16px;
+   margin-right: 20px;">
+   J'ai compris. Continuer le tache.
+</a>
+
+<a href="https://www.google.com" 
+   style="
+   padding: 12px 24px;
+   background-color: #6c757d;
+   color: white;
+   text-decoration: none;
+   border-radius: 6px;
+   font-size: 16px;">
+   Pas compris. Quitter le page.
+</a>
+</div>
