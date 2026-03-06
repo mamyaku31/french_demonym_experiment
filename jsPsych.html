@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>French demonym formation</title>
+    <script src="https://unpkg.com/jspsych@7.3.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+    <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+  <script>
+    //jsPsychを初期化する。
+var jsPsych = initJsPsych({
+  show_progress_bar: true,
+  message_progress_bar: "Votre tache en cours",
+  auto_update_progress_bar: true,
+  on_finish: function() {
+    window.location = "https://google.com"
+  }
+});
+
+var wavs = ['Parisien.wav', 'Européen.wav']
+
+var preload = {
+  type: jsPsychPreload,
+  audio: wavs,
+  message: "Chargement en cours",
+};
+
+var browser_check = {
+  type: jsPsychBrowserCheck,
+  inclusion_function: (data) => {
+    return data.mobile === false
+  },
+  exclusion_message: (data) => {
+    if (data.mobile) {
+      return '<p> Vous pouvez y participer seulement depuis un ordinateur</p>';
+    } else if (data.browser !== 'chrome') {
+      return '<p> Les navigateurs soif Google Chrome ne sont pas autorisés </p>'
+    }
+  }
+};
+
+const welcome = {
+  type: jsPsychHtmlButtonResponse,
+  prompt: "<p> Merci beaucoup de participer à cette éxpérimentation </p>",
+  stimulus: "",
+  choices: ['Suivant'],
+};
+
+// 参加者情報を保存するグローバル変数を初期化（重要！）
+window.participant_info = {};
+
+var background = {
+  type: jsPsychSurveyText,
+  questions: [
+    {
+      prompt: "<p> Saissisez votre âge. Les information personnelle sont traitées de manière anonyme <br>exemple：25</p>",
+      required: true,
+      name: 'Age',
+    },
+  ],
+  button_label: "Suivant",
+  on_finish: function(data) {
+    // 修正: 'Account' ではなく 'ID' を使用
+    window.participant_info.ID = data.response.ID;
+    window.participant_info.Age = data.response.Age;
+
+    var curr_progress_bar_value = jsPsych.getProgressBarCompleted();
+    jsPsych.setProgressBar(curr_progress_bar_value + (1/70));
+  }
+};
+
+var gender = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: '<p>Sélectionnez votre genre</p>',
+  choices: ['Femme',
+    'Homme',
+    'Autre'],
+  response_ends_trial: true,
+  on_finish: function(data) {
+    // 修正: data.responseは選択したボタンのインデックス(0, 1, 2)なので、テキストに変換
+    const genderChoices = ['Femme',
+      'Homme',
+      'Autre'];
+    window.participant_info.Gender = genderChoices[data.response];
+
+    jsPsych.data.addProperties({
+      ID: window.participant_info.ID,
+      Age: window.participant_info.Age,
+      Gender: window.participant_info.Gender
+    });
+
+    var curr_progress_bar_value = jsPsych.getProgressBarCompleted();
+    jsPsych.setProgressBar(curr_progress_bar_value + (1/70));
+  }
+};
+
+var birthplace = {
+  type: jsPsychSurveyText,
+  questions: [{
+    prompt: "Répondez votre ville de naissance que vous aviez habité jusqu'à vous aviez diplômé le college",
+    required: true,
+    horizontal: true,
+    name: 'birthplace'
+  }],
+  button_label: 'Suivant',
+};
+
+var instructions = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: '<p>Votre information est bien enregistré. </p><br>\
+  <p>Nous commençons un exercise à partir de maintenant.<br><br></p>\
+  Cliquez quelque clef à continuer.',
+};
+
+var instruction1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<p><strong>C'est une section que l'on faire des exercises pour l'expérimentation.</strong><br><br>\
+    Les instructions vont maintenant s'afficher et être diffusées vocalement.<br>\
+    Veuillez suivre ces instructions pour sélectionner votre réponse.</p>",
+  choices: ["J'ai compris"],
+};
+
+const exercise1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Paris est un ville dans îles-de-France.<br>\
+  Paul vient de Paris. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='Parisien.wav'></audio>",
+  choices: ["1: parisien",
+    "2: parisois",
+    "3: parisais",
+    "4: pariséen",
+    "5: autre"],
+
+  on_load: function() {
+    document.getElementById("audio_stim").play();
+  }
+};
+
+const excercise2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>L'Europe est un territoire conventionnellement à l'est de l'Asie.<br>\
+  Clara vient de l'Europe. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='Européen.wav'></audio>",
+
+  choices: ["1: europien",
+    "2: europois",
+    "3: europais",
+    "4: européen",
+    "5: autre"],
+
+  on_load: function() {
+    document.getElementById("audio_stim").play();
+  }
+};
+
+// Experiment Section.
+const instruction2 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<p> Voici la section consacrée à l'expérience proprement dite. <br><br>\
+   <strong>Comme lors de l'entraînement, veuillez choisir la réponse qui vous semble la plus naturelle en suivant les instructions données dans le texte et l'enregistrement audio.</strong><br><br>\
+   Veillez à écouter toutes les instructions audio avant de répondre.</p>",
+
+  choices: ["J'ai compris."],
+};
+
+//Stimulus items
+
+var item_list = [{
+  "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Horshame est un ville dans îles-de-France.<br>\
+  Larent vient de Horshame. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='Parisien.wav'></audio>",
+  "choices": ["1:Horshamien",
+    "2:Horshamois",
+    "3,Horshamais",
+    "4:Horshaméen"],
+},
+
+  {
+    "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Nabope est un ville dans îles-de-France.<br>\
+  Larent vient de Nabope. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='Parisien.wav'></audio>",
+    "choices": ["1:Nabopien",
+      "2:Nabopois",
+      "3:Nabopais",
+      "4:Nabopéen"],
+  },
+]
+
+
+//randomization
+var shuffledArray = jsPsych.randomization.shuffle(item_list);
+
+const Experiment = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: function() {
+    return `
+      <p>${jsPsych.timelineVariable("stimulus")}</p>
+      <audio src="${jsPsych.timelineVariable("audio")}"></audio>
+    `;
+  },
+  choices: jsPsych.timelineVariable("choices"),
+  on_load: function() {
+    document.querySelector("audio").play();
+  }
+};
+
+var Experiment_timeline = {
+  timeline: [Experiment],
+  timeline_variables: shuffledArray,
+};
+
+// End
+var goodbye = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<p> Je vous remercie pour votre participation <br>\
+  Notez le code de fin d'expérience qui s'affiche sur l'écran suivant et saisissez-le dans Prolific.<br>\
+  Veuillez noter que nous ne pourrons pas vous verser de rémunération si le fichier d'enregistrement présente des problèmes ou si le code de fin d'expérience est incorrect.<br><br>\
+  ※Après avoir vérifié le code de fin d'expérience sur l'écran suivant,<br><span style='color: red;'>N'oubliez pas d'appuyer sur le bouton « Terminer l'expérience » !</span><br>\
+  Ne fermez pas votre navigateur avant d'avoir appuyé sur le bouton.</p>",
+  choices: ["Vérifier le code de fin d'expérience"],
+  response_ends_trial: true,
+};
+var project = "myfg";
+const pid0 = Math.floor(Math.random() * 10000);
+const pid = project.concat(pid0);
+var end_number = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: '<p>Votre code：</p>'.concat(pid),
+  choices: ["Terminer l'expérience"],
+  response_ends_trial: true,
+};
+
+// タイムラインを作成（これが重要！）
+var timeline = [
+  preload,
+  browser_check,
+  welcome,
+  background,
+  gender,
+  birthplace,
+  instructions,
+  instruction1,
+  exercise1,
+  excercise2,
+  instruction2,
+  Experiment_timeline,
+  goodbye,
+  end_number,
+];
+
+// 実験を実行
+jsPsych.run(timeline);
+  </script>
+</html>
