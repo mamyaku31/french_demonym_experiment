@@ -31,7 +31,7 @@ Cette expérimentation a but de ...
    border-radius: 6px;
    font-size: 16px;
    margin-right: 20px;">
-   **J'ai compris. Continuer le tache.**
+   J'ai compris. Continuer le tache.
 </a>
 
 <a href="https://www.google.com" 
@@ -42,6 +42,6 @@ Cette expérimentation a but de ...
    text-decoration: none;
    border-radius: 6px;
    font-size: 16px;">
-   **Pas compris. Quitter le page.**
+   Pas compris. Quitter le page.
 </a>
 </div>
