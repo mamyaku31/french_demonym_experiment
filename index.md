@@ -53,10 +53,19 @@ Google Chrome.
 
 * Le numéro de classement est attribué automatiquement par le programme à partir d'un générateur de nombres aléatoires. Vous n'avez pas besoin de le saisir.
 
-* 
+* Les participants ne peuvent être identifiés à partir du contenu de l'expérience.
 
+* Les réponses seront utilisées uniquement dans le cadre de la recherche et ne permettront pas d'identifier les personnes concernées.
 
+* Les données que vous nous avez fournies sont converties en données numériques et conservées dans un endroit sécurisé. Ces données numériques ne permettent pas d'identifier les personnes.
 
+## 6\. Publication des résultats de recherche
+
+* Les résultats des expériences seront publiés dans des articles et lors de conférences après avoir été quantifiés et traités statistiquement.
+
+* Les données publiées concernent uniquement les réponses aux questions et ne contiennent aucune information personnelle telle que votre âge ou le genre.
+
+### Si vous acceptez les conditions ci-dessus et souhaitez participer à l'expérience, veuillez cliquer sur « J'ai compris. Continuer. » pour commencer l'expérience.
 
 ---
 
@@ -73,7 +82,7 @@ Google Chrome.
    border-radius: 6px;
    font-size: 16px;
    margin-right: 20px;">
-   J'ai compris. Continuer le tache.
+   J'ai compris. Continuer.
 </a>
 
 <a href="https://www.google.com" 
