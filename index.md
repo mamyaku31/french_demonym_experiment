@@ -12,9 +12,51 @@
 
 ---
 
-## Introduction sur cette expérimentation
+## 1\. Introduction sur cette expérimentation
 
-Cette expérimentation a but de ...
+* Cette expérience est menée afin d'étudier la formation des gentilés en français, c'est-à-dire les mots désignant les habitants d'une ville à partir du nom de celle-ci.
+
+## 2\. Participation
+
+* Pour participer à l'expérience, veuillez utiliser votre propre ordinateur. Afin d'éviter tout bug, veuillez utiliser le navigateur
+Google Chrome.
+
+* Si vous acceptez de participer à cette expérience, veuillez cliquer sur le bouton « J'ai compris, continuer. » pour accéder à la page de l'expérience.
+
+* Cette expérience consiste à choisir parmi quatre options celle qui vous semble la plus naturelle pour répondre à la question posée.
+
+## 3\. Les inconvénients possibles et les moyens d'y remédier
+
+* La réalisation de cette expérience n'entraînera aucun danger, aucune contrainte ni aucun inconvénient pour le corps et l'esprit des participants.
+
+* Dans cette expérience, la seule tâche que vous aurez à accomplir consiste à choisir, parmi les quatre options proposées à l'écran, celle qui vous semble la plus naturelle.
+
+* Les réponses fournies par les participants sont automatiquement enregistrées dans un référentiel privé de *Open Science Framework* (*OSF*, lien: <a href="https://osf.io/6dgtw">https://osf.io/6dgtw </a>) accessible uniquement aux chercheurs, et ne peuvent être consultées par aucune autre personne que les chercheurs et leurs collaborateurs.
+
+## 4\. Consentement à la coopération
+
+* Cette expérience est réalisée de votre plein gré.
+
+* Votre volonté de participer sera confirmée lorsque vous cliquerez sur « Accepter et continuer », et l'expérience sera menée après avoir obtenu votre consentement.
+
+* Vous ne subirez aucun préjudice si vous refusez ou interrompez cette expérience.
+
+* Si vous souhaitez vous retirer de l'expérience après son commencement, n'hésitez pas à le faire.
+
+* Même après avoir donné votre accord pour participer à l'expérience, vous pouvez le retirer à tout moment.
+
+* Dans le cadre des tests d'écoute et des questionnaires, vous n'êtes pas obligé de répondre aux questions auxquelles vous ne souhaitez pas répondre.
+
+## 5\. Protection de vos données personnelles
+
+* Les informations personnelles de toutes les personnes participant à cette expérience seront converties en numéros de référence, enregistrées dans l'OSF et strictement protégées.
+
+* Le numéro de classement est attribué automatiquement par le programme à partir d'un générateur de nombres aléatoires. Vous n'avez pas besoin de le saisir.
+
+* 
+
+
+
 
 ---
 
