@@ -4,7 +4,7 @@
 
 **Conducteur: Mamoru Yakuwa**
 
-**Contact: myakuwa2005@gmail.com**
+**Contact** Si vous avez des questions ou des doutes concernant cette étude, n'hésitez pas à contacter la personne responsable.: **myakuwa2005@gmail.com** 
 
 *Departement de la langues et literature française, Faculté de lettres, Université Aoyama Gakuin*
 
