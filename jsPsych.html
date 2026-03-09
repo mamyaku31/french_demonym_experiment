@@ -16,7 +16,7 @@
   <body></body>
   <script>
     
-    //jsPsychを初期化する。
+    //initialize jsPsych...
 const jsPsych = initJsPsych({
   show_progress_bar: true,
   message_progress_bar: "Votre tache en cours",
@@ -60,7 +60,7 @@ const welcome = {
   choices: ['Suivant'],
 };
 
-// 参加者情報を保存するグローバル変数を初期化（重要！）
+// initializing global variable to store participant ID...
 window.participant_info = {};
 
 var background = {
@@ -74,7 +74,6 @@ var background = {
   ],
   button_label: "Suivant",
   on_finish: function(data) {
-    // 修正: 'Account' ではなく 'ID' を使用
     window.participant_info.ID = data.response.ID;
     window.participant_info.Age = data.response.Age;
 
@@ -91,7 +90,6 @@ var gender = {
     'Autre'],
   response_ends_trial: true,
   on_finish: function(data) {
-    // 修正: data.responseは選択したボタンのインデックス(0, 1, 2)なので、テキストに変換
     const genderChoices = ['Femme',
       'Homme',
       'Autre'];
@@ -261,7 +259,7 @@ filename: filename,
 data_string: ()=>jsPsych.data.get().csv()
 };
 
-// タイムラインを作成（これが重要！）
+// Timeline
 var timeline = [
   preload,
   browser_check,
@@ -280,7 +278,7 @@ var timeline = [
   save_data,
 ];
 
-// 実験を実行
+// Run the experiment.
 jsPsych.run(timeline);
     
   </script>
