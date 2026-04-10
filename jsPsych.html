@@ -376,10 +376,7 @@ var shuffledArray = jsPsych.randomization.shuffle(item_list);
 const Experiment = {
   type: jsPsychHtmlButtonResponse,
   stimulus: function() {
-    return `
-      <p>${jsPsych.timelineVariable("stimulus")}</p>
-      <audio src="${jsPsych.timelineVariable("audio")}"></audio>
-    `;
+    return jsPsych.timelineVariable("stimulus");
   },
   choices: jsPsych.timelineVariable("choices"),
   on_load: function() {
