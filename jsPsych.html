@@ -4,20 +4,19 @@
 <title>French demonym formation</title>
 
 <script src="https://unpkg.com/jspsych@7.3.2"></script>
+
 <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
 <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.2"></script>
 <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
 <script src="https://unpkg.com/@jspsych/plugin-browser-check@1.0.0"></script>
 <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
-<script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+
 <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet"/>
-    
 </head>
   <body></body>
   <script>
-    
-    //initialize jsPsych...
-const jsPsych = initJsPsych({
+//Initialisation de jsPsych
+var jsPsych = initJsPsych({
   show_progress_bar: true,
   message_progress_bar: "Votre tache en cours",
   auto_update_progress_bar: true,
@@ -26,12 +25,10 @@ const jsPsych = initJsPsych({
   }
 });
 
-//DataPipe plugin
-const subject_id = jsPsych.randomization.randomID(10);
-const filename = `${subject_id}.csv`;
-            
-
-var wavs = ['Parisien.wav', 'Europeen.wav']
+var wavs = ['paris.wav', 'europe.wav', 'stimulus1.wav', 'stimulus2.wav', 'stimulus3.wav', 'stimulus4.wav',
+'stimulus5.wav', 'stimulus6.wav', 'stimulus7.wav', 'stimulus8.wav', 'stimulus9.wav',
+'stimulus10.wav', 'stimulus11.wav', 'stimulus12.wav', 'stimulus13.wav',
+'stimulus14.wav', 'stimulus15.wav', 'stimulus16.wav', 'stimulus17.wav']
 
 var preload = {
   type: jsPsychPreload,
@@ -60,7 +57,7 @@ const welcome = {
   choices: ['Suivant'],
 };
 
-// initializing global variable to store participant ID...
+// 参加者情報を保存するグローバル変数を初期化（重要！）
 window.participant_info = {};
 
 var background = {
@@ -74,6 +71,7 @@ var background = {
   ],
   button_label: "Suivant",
   on_finish: function(data) {
+    // 修正: 'Account' ではなく 'ID' を使用
     window.participant_info.ID = data.response.ID;
     window.participant_info.Age = data.response.Age;
 
@@ -90,6 +88,7 @@ var gender = {
     'Autre'],
   response_ends_trial: true,
   on_finish: function(data) {
+    // Correction: data response is the index of the selected button (0, 1, 2)
     const genderChoices = ['Femme',
       'Homme',
       'Autre'];
@@ -109,7 +108,8 @@ var gender = {
 var birthplace = {
   type: jsPsychSurveyText,
   questions: [{
-    prompt: "Répondez votre ville de naissance que vous aviez habité jusqu'à vous aviez diplômé le college",
+    prompt: "Répondez votre ville de naissance que vous aviez habité jusqu'à vous aviez diplômé le college <br>\
+    exemple: 0-5 ans, Caen, 5-10 ans, Le Havre, 10-18 ans, Rouen, 18-30 ans, Paris",
     required: true,
     horizontal: true,
     name: 'birthplace'
@@ -134,16 +134,15 @@ var instruction1 = {
 
 const exercise1 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
-  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
-  <strong>Paris est un ville dans îles-de-France.<br>\
+  stimulus: "<p> Écoutez l'enregistrement et choisissez, parmi les propositions, celle qui convient pour remplir l'espace vide.\
+Veuillez choisir l’option la plus naturelle pour vous.<br><br><br>\
+<strong>Paris est une ville en Île-de-France.<br>\
   Paul vient de Paris. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='Parisien.wav'></audio>",
+  <audio id='audio_stim' src='paris.wav'></audio>",
   choices: ["1: parisien",
     "2: parisois",
     "3: parisais",
-    "4: pariséen",
-    "5: autre"],
+    "4: pariséen"],
 
   on_load: function() {
     document.getElementById("audio_stim").play();
@@ -156,13 +155,12 @@ const excercise2 = {
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>L'Europe est un territoire conventionnellement à l'est de l'Asie.<br>\
   Clara vient de l'Europe. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='Européen.wav'></audio>",
+  <audio id='audio_stim' src='europe.wav'></audio>",
 
-  choices: ["1: europien",
-    "2: europois",
-    "3: europais",
-    "4: européen",
-    "5: autre"],
+  choices: ["1: europienne",
+    "2: europoise",
+    "3: europaise",
+    "4: européene"],
 
   on_load: function() {
     document.getElementById("audio_stim").play();
@@ -181,30 +179,195 @@ const instruction2 = {
 
 //Stimulus items
 
-var item_list = [{
+const item_list = [{
   "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
-  <strong>Horshame est un ville dans îles-de-France.<br>\
-  Larent vient de Horshame. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='Parisien.wav'></audio>",
-  "choices": ["1:Horshamien",
-    "2:Horshamois",
-    "3,Horshamais",
-    "4:Horshaméen"],
+  <strong>Musième est une ville. Paul vient de Musième. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus1.wav'></audio>",
+  "choices": ["1:Musiémien",
+    "2:Musiémois",
+    "3:Musiémais",
+    "4:Musiéméen"],
 },
 
   {
-    "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
-  <strong>Nabope est un ville dans îles-de-France.<br>\
-  Larent vient de Nabope. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='Parisien.wav'></audio>",
-    "choices": ["1:Nabopien",
-      "2:Nabopois",
-      "3:Nabopais",
-      "4:Nabopéen"],
-  },
+  <strong>Musièpe est une ville. Clara vient de Musièpe. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus2.wav'></audio>",
+  "choices": ["1:Musiépienne",
+    "2:Musiépoise",
+    "3:Musiépaise",
+    "4:Musiépéene"],
+},
+
+{
+  "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièbe est une ville. Jean vient de Musièbe. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus3.wav'></audio>",
+  "choices": ["1:Musiébien",
+    "2:Musiébois",
+    "3:Musiébais",
+    "4:Musiébéen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièfe est une ville. Marie vient de Musièfe. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus4.wav'></audio>",
+  "choices": ["1:Musièfienne",
+    "2:Musiéfoise",
+    "3:Musiéfaise",
+    "4:Musiéféene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musiève est une ville. Pierre vient de Musiève. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus5.wav'></audio>",
+  "choices": ["1:Musiévien",
+    "2:Musiévois",
+    "3:Musiévais",
+    "4:Musiévéen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musiène est une ville. Claire vient de Musiène. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus6.wav'></audio>",
+  "choices": ["1:Musiénienne",
+    "2:Musiénoise",
+    "3:Musiénaise",
+    "4:Musiénéene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musiète est une ville. Thomas vient de Musiète. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus7.wav'></audio>",
+  "choices": ["1:Musiétien",
+    "2:Musiétois",
+    "3:Musiétais",
+    "4:Musiétéen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musiède est une ville. Sophie vient de Musiède. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus8.wav'></audio>",
+  "choices": ["1:Musiédienne",
+    "2:Musiédoise",
+    "3:Musiédaise",
+    "4:Musiédéene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièsse est une ville. David vient de Musièsse. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus9.wav'></audio>",
+  "choices": ["1:Musiéssien",
+    "2:Musiéssois",
+    "3:Musiéssais",
+    "4:Musiésséen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièse est une ville. Zoé vient de Musièse. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus10.wav'></audio>",
+  "choices": ["1:Musiésienne",
+    "2:Musiésoise",
+    "3:Musiésaise",
+    "4:Musiéséene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièle est une ville. Gocé vient de Musièle. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus11.wav'></audio>",
+  "choices": ["1:Musiélien",
+    "2:Musiélois",
+    "3:Musiélais",
+    "4:Musiéléen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièche est une ville. Léa vient de Musièche. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus12.wav'></audio>",
+  "choices": ["1:Musiéchienne",
+    "2:Musiéchoise",
+    "3:Musiéchaise",
+    "4:Musiéchéene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièye est une ville. Gabrielle vient de Musièye. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus13.wav'></audio>",
+  "choices": ["1:Musiéyienne",
+    "2:Musiéyoise",
+    "3:Musiéyaise",
+    "4:Musiéyéene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musiège est une ville. Benjamin vient de Musiège. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus14.wav'></audio>",
+  "choices": ["1:Musiégien",
+    "2:Musiégeois",
+    "3:Musiégeais",
+    "4:Musiégéen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musièque est une ville. Léon vient de Musique. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus15.wav'></audio>",
+  "choices": ["1:Musiéquienne",
+    "2:Musiéquoise",
+    "3:Musiéquaise",
+    "4:Musiéquéene"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musiègue est une ville. Julie vient de Musiègue. Elle est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus16.wav'></audio>",
+  "choices": ["1:Musiéguien",
+    "2:Musiégois",
+    "3:Musiégais",
+    "4:Musiéguéen"],
+},
+
+{
+"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
+  Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
+  <strong>Musière est une ville. Antoine vient de Musière. Il est ___.</strong></p>\
+  <audio id='audio_stim' src='stimulus17.wav'></audio>",
+  "choices": ["1:Musiérien",
+    "2:Musiérois",
+    "3:Musiérais",
+    "4:Musiéréen"],
+},
 ]
+
+
 
 
 //randomization
@@ -250,15 +413,6 @@ var end_number = {
   response_ends_trial: true,
 };
 
-//Datapipe plugin
-const save_data = {
-type: jsPsychPipe,
-action: "save",
-experiment_id: "wgjIR9ZWvB4L",
-filename: filename,
-data_string: ()=>jsPsych.data.get().csv()
-};
-
 // Timeline
 var timeline = [
   preload,
@@ -275,11 +429,9 @@ var timeline = [
   Experiment_timeline,
   goodbye,
   end_number,
-  save_data,
 ];
 
-// Run the experiment.
+// Run jsPsych
 jsPsych.run(timeline);
-    
   </script>
 </html>
