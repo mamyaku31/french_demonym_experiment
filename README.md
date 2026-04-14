@@ -5,6 +5,7 @@ This GitHub repository include supplementary materials for the online experiment
 
 The repository consists the directory/files as follows:
 
+```
 .
 ├── README.md
 ├── audio
@@ -47,3 +48,5 @@ The repository consists the directory/files as follows:
 ├── index.md
 ├── jsPsych.html
 └── sound_stimuli_generator.py
+
+```
