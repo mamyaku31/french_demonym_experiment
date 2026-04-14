@@ -50,3 +50,6 @@ The repository consists the directory/files as follows:
 └── sound_stimuli_generator.py
 
 ```
+*index.md* is used as an informed consent page and if a participant accept this, the page goes to *jsPsych.html*, which the experiment is described.
+
+The WAV files in audio directory are used as phonetic stimuli and they were generated using a Python library called *pyttsx3*, a famous one for text-to-speech synthesis.
