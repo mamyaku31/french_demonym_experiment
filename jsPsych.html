@@ -28,10 +28,10 @@ const jsPsych = initJsPsych({
   }
 });
 
-const wavs = ['fixed_paris.wav', 'fixed_europe.wav', 'fixed_stimulus1.wav', 'fixed_stimulus2.wav', 'fixed_stimulus3.wav', 'fixed_stimulus4.wav',
-  'fixed_stimulus5.wav', 'fixed_stimulus6.wav', 'fixed_stimulus7.wav', 'fixed_stimulus8.wav', 'fixed_stimulus9.wav',
-  'fixed_stimulus10.wav', 'fixed_stimulus11.wav', 'fixed_stimulus11.wav', 'fixed_stimulus12.wav', 'fixed_stimulus13.wav',
-  'fixed_stimulus14.wav', 'fixed_stimulus15.wav', 'fixed_stimulus16.wav', 'fixed_stimulus17.wav']
+const wavs = ['audio/fixed_paris.wav', 'audio/fixed_europe.wav', 'audio/fixed_stimulus1.wav', 'audio/fixed_stimulus2.wav', 'audio/fixed_stimulus3.wav', 'audio/fixed_stimulus4.wav',
+  'audio/fixed_stimulus5.wav', 'audio/fixed_stimulus6.wav', 'audio/fixed_stimulus7.wav', 'audio/fixed_stimulus8.wav', 'audio/fixed_stimulus9.wav',
+  'audio/fixed_stimulus10.wav', 'audio/fixed_stimulus11.wav', 'audio/fixed_stimulus11.wav', 'audio/fixed_stimulus12.wav', 'audio/fixed_stimulus13.wav',
+  'audio/fixed_stimulus14.wav', 'audio/fixed_stimulus15.wav', 'audio/fixed_stimulus16.wav', 'audio/fixed_stimulus17.wav']
 
 const preload = {
   type: jsPsychPreload,
@@ -153,7 +153,7 @@ const exercise1 = {
 Veuillez choisir l’option la plus naturelle pour vous.<br><br><br>\
 <strong>Paris est une ville en Île-de-France.<br>\
   Paul vient de Paris. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_paris.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_paris.wav'></audio>",
   choices: ["1: parisien",
     "2: parisois",
     "3: parisais",
@@ -173,7 +173,7 @@ const excercise2 = {
   Veuillez choisir un de choix le plus naturel pour vous.<br><br><br>\
   <strong>L'Europe est un territoire conventionnellement.<br>\
   Clara vient de l'Europe. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_europe.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_europe.wav'></audio>",
 
   choices: ["1: europien",
     "2: europois",
@@ -296,7 +296,7 @@ const item_list_1 = [{
   "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musième est une ville. Paul vient de Musième. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus1.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus1.wav'></audio>",
   "choices": ["1:Musiémien",
     "2:Musiémois",
     "3:Musiémais",
@@ -313,7 +313,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièpe est une ville. Clara vient de Musièpe. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus2.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus2.wav'></audio>",
     "choices": ["1:Musiépienne",
       "2:Musiépoise",
       "3:Musiépaise",
@@ -330,7 +330,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièbe est une ville. Jean vient de Musièbe. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus3.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus3.wav'></audio>",
     "choices": ["1:Musiébien",
       "2:Musiébois",
       "3:Musiébais",
@@ -347,7 +347,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièfe est une ville. Marie vient de Musièfe. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus4.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus4.wav'></audio>",
     "choices": ["1:Musièfienne",
       "2:Musiéfoise",
       "3:Musiéfaise",
@@ -364,7 +364,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musiève est une ville. Pierre vient de Musiève. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus5.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus5.wav'></audio>",
     "choices": ["1:Musiévien",
       "2:Musiévois",
       "3:Musiévais",
@@ -381,7 +381,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musiène est une ville. Claire vient de Musiène. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus6.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus6.wav'></audio>",
     "choices": ["1:Musiénienne",
       "2:Musiénoise",
       "3:Musiénaise",
@@ -398,7 +398,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musiète est une ville. Thomas vient de Musiète. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus7.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus7.wav'></audio>",
     "choices": ["1:Musiétien",
       "2:Musiétois",
       "3:Musiétais",
@@ -415,7 +415,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musiède est une ville. Sophie vient de Musiède. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus8.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus8.wav'></audio>",
     "choices": ["1:Musiédienne",
       "2:Musiédoise",
       "3:Musiédaise",
@@ -432,7 +432,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièsse est une ville. David vient de Musièsse. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus9.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus9.wav'></audio>",
     "choices": ["1:Musiéssien",
       "2:Musiéssois",
       "3:Musiéssais",
@@ -449,7 +449,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièse est une ville. Zoé vient de Musièse. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus10.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus10.wav'></audio>",
     "choices": ["1:Musiésienne",
       "2:Musiésoise",
       "3:Musiésaise",
@@ -466,7 +466,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièle est une ville. Gocé vient de Musièle. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus11.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus11.wav'></audio>",
     "choices": ["1:Musiélien",
       "2:Musiélois",
       "3:Musiélais",
@@ -483,7 +483,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièche est une ville. Léa vient de Musièche. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus12.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus12.wav'></audio>",
     "choices": ["1:Musiéchienne",
       "2:Musiéchoise",
       "3:Musiéchaise",
@@ -500,7 +500,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièye est une ville. Gabrielle vient de Musièye. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus13.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus13.wav'></audio>",
     "choices": ["1:Musiéyienne",
       "2:Musiéyoise",
       "3:Musiéyaise",
@@ -517,7 +517,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musiège est une ville. Benjamin vient de Musiège. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus14.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus14.wav'></audio>",
     "choices": ["1:Musiégien",
       "2:Musiégeois",
       "3:Musiégeais",
@@ -534,7 +534,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musièque est une ville. Léon vient de Musique. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus15.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus15.wav'></audio>",
     "choices": ["1:Musiéquienne",
       "2:Musiéquoise",
       "3:Musiéquaise",
@@ -551,7 +551,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musiègue est une ville. Julie vient de Musiègue. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus16.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus16.wav'></audio>",
     "choices": ["1:Musiéguien",
       "2:Musiégois",
       "3:Musiégais",
@@ -568,7 +568,7 @@ const item_list_1 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Musière est une ville. Antoine vient de Musière. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulus17.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulus17.wav'></audio>",
     "choices": ["1:Musiérien",
       "2:Musiérois",
       "3:Musiérais",
@@ -621,7 +621,7 @@ const item_list_2 = [{
   "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaume est une ville dans îles-de-France. Paul vient d'Halaume. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusa.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusa.wav'></audio>",
   "choices": ["1:Halaumien",
     "2:Halaumoise",
     "3:Halaumois",
@@ -637,7 +637,7 @@ const item_list_2 = [{
 {"stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaupe est une ville dans Occitanie. Clara vient d'Halaupe. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusb.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusb.wav'></audio>",
   "choices": ["1:Halaupienne",
     "2:Halaupoise",
     "3:Halaupaise",
@@ -655,7 +655,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaube est une ville dans Haut-de-France. Jean vient d'Halaube. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusc.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusc.wav'></audio>",
     "choices": ["1:Halaubien",
       "2:Halaubois",
       "3:Halaubais",
@@ -673,7 +673,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaufe est une ville dans Centre-Val de Loire. Marie vient d'Halaufe. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusd.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusd.wav'></audio>",
     "choices": ["1:Halaufienne",
       "2:Halaufoise",
       "3:Halaufaise",
@@ -691,7 +691,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halauve est une ville dans Île-de-France. Pierre vient d'Halauve. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimuluse.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimuluse.wav'></audio>",
     "choices": ["1:Halauvien",
       "2:Halauvois",
       "3:Halauvais",
@@ -709,7 +709,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaune est une ville dans Occitanie. Claire vient d'Halaune. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusf.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusf.wav'></audio>",
     "choices": ["1:Halaunienne",
       "2:Halaunoise",
       "3:Halaunaise",
@@ -727,7 +727,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaute est une ville dans Hauts-de-France. Thomas vient d'Halaute. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusg.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusg.wav'></audio>",
     "choices": ["1:Musiétien",
       "2:Musiétois",
       "3:Musiétais",
@@ -745,7 +745,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaude est une ville dans Centre-Val de Loire. Sophie vient d'Halaude. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulush.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulush.wav'></audio>",
     "choices": ["1:Halaudienne",
       "2:Halaudoise",
       "3:Halaudaise",
@@ -763,7 +763,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halausse est une ville dans Île-de-France. David vient d'Halausse. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusi.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusi.wav'></audio>",
     "choices": ["1:Halaussien",
       "2:Halaussois",
       "3:Halaussais",
@@ -781,7 +781,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halause est une ville dans Occitanie. Zoé vient d'Halause. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusj.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusj.wav'></audio>",
     "choices": ["1:Halausienne",
       "2:Halausoise",
       "3:Halausaise",
@@ -799,7 +799,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaule est une ville dans Hauts-de-France. Gocé vient d'Halaule. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusk.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusk.wav'></audio>",
     "choices": ["1:Halaulien",
       "2:Halaulois",
       "3:Halaulais",
@@ -817,7 +817,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halauche est une ville dans Centre-Val de Loire. Léa vient d'Halauche. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusl.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusl.wav'></audio>",
     "choices": ["1:Halauchienne",
       "2:Halauchoise",
       "3:Halauchaise",
@@ -835,7 +835,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halauye est une ville dans Île-de-France. Gabrielle vient d'Halauye. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusm.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusm.wav'></audio>",
     "choices": ["1:Halauyenne",
       "2:Halauyoise",
       "3:Halauyaise",
@@ -853,7 +853,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halauge est une ville dans Occitanie. Benjamin vient d'Halauge. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusn.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusn.wav'></audio>",
     "choices": ["1:Halaugien",
       "2:Halaugeois",
       "3:Halaugeais",
@@ -871,7 +871,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halauque est une ville dans Hauts-de-France. Léon vient d'Halauque. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimuluso.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimuluso.wav'></audio>",
     "choices": ["1:Halauquien",
       "2:Halauquois",
       "3:Halauquais",
@@ -889,7 +889,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaugue est une ville dans Centre-Val de Loire. Julie vient d'Halaugue. Elle est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusp.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusp.wav'></audio>",
     "choices": ["1:Halauguienne",
       "2:Halauguoise",
       "3:Halaugaise",
@@ -907,7 +907,7 @@ const item_list_2 = [{
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir un de choix le plus naturel pour vous. S'il n'y a pas de choix naturel, choisissez <autre> <br><br><br>\
   <strong>Halaure est une ville dans Îles-de-France. Antoine vient de Halaure. Il est ___.</strong></p>\
-  <audio id='audio_stim' src='fixed_stimulusq.wav'></audio>",
+  <audio id='audio_stim' src='audio/fixed_stimulusq.wav'></audio>",
     "choices": ["1:Halaurien",
       "2:Halaurois",
       "3:Halaurais",
