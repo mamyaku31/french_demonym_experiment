@@ -46,7 +46,7 @@ Google Chrome.
 
 * Les résultats des expériences peuvent être publiés dans des articles scientifiques ou lors d'évènements universitaires après avoir été quantifiés et traités statistiquement.
 
-* Les données publiées concernent uniquement les réponses aux questions et ne contiennent aucune information personnelle telle que l'âge ou le genre.
+* Les données personnelles telle que l'âge et le genre sont utilisées à des fins statistiques mais ne sont pas publiées.
 
 ## 5\. Consentement
 
