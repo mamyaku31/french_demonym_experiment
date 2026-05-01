@@ -1,29 +1,27 @@
 #  Consentement éclairé 
 
-# Une expérimentation sur la formation des gentilés
+# Expérimentation sur la formation des gentilés
 
-**Conducteur: Mamoru Yakuwa**
+**Contact** Pour toute question ou remarque, merci de contacter **Mamoru Yakuwa** **myakuwa2005@gmail.com** 
+ 
+*Département de la langues et littérature française, Faculté de lettres, Université Aoyama Gakuin*
 
-**Contact** Si vous avez des questions ou des doutes concernant cette étude, n'hésitez pas à contacter la personne responsable.: **myakuwa2005@gmail.com** 
-
-*Departement de la langues et literature française, Faculté de lettres, Université Aoyama Gakuin*
-
-*Shibuya, Tokyo, Japon*
+*Tokyo, Japon*
 
 ---
 
-## 1\. Introduction sur cette expérimentation
+## 1\. Introduction
 
-* Cette expérience est menée afin d'étudier la formation des gentilés en français, c'est-à-dire les mots désignant les habitants d'une ville à partir du nom de celle-ci.
+* Cette expérience est menée afin d'étudier la formation des gentilés en français, c'est-à-dire le nom désignant les habitants d'une ville.
 
 ## 2\. Participation
 
-* Pour participer à l'expérience, veuillez utiliser votre propre ordinateur. Afin d'éviter tout bug, veuillez utiliser le navigateur
+* Pour participer à l'expérience, veuillez utiliser votre propre ordinateur. Afin d'éviter tout problème informatique, veuillez utiliser le navigateur
 Google Chrome.
+
 
 * Si vous acceptez de participer à cette expérience, veuillez cliquer sur le bouton « J'ai compris, continuer. » pour accéder à la page de l'expérience.
 
-* Cette expérience consiste à choisir parmi quatre options celle qui vous semble la plus naturelle pour répondre à la question posée.
 
 ## 3\. Les inconvénients possibles et les moyens d'y remédier
 
