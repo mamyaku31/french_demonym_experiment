@@ -58,7 +58,7 @@ const browser_check = {
 
 const welcome = {
   type: jsPsychHtmlButtonResponse,
-  prompt: "<p> Merci beaucoup de participer à cette éxpérimentation </p>",
+  prompt: "<p> Merci beaucoup de participer à cette enquête </p>",
   stimulus: "",
   choices: ['Suivant'],
 };
@@ -69,7 +69,7 @@ window.participant_info = {};
 const background = {
   type: jsPsychSurveyText,
   questions: [{
-    prompt: "<p> Saissisez votre âge. Les information personnelle sont traitées de manière anonyme <br>exemple：25</p>",
+    prompt: "<p> Saissisez votre âge. Les information personnelles sont traitées de manière anonyme <br>exemple：25</p>",
     required: true,
     name: 'Age',
   },
@@ -113,7 +113,7 @@ const gender = {
 const birthplace = {
   type: jsPsychSurveyText,
   questions: [{
-    prompt: "Répondez votre ville de naissance que vous aviez habité jusqu'à maintenant<br>\
+    prompt: "Quelle est votre ville de naissance et où havez-vous habité jusqu'à maintenant<br>\
     exemple: 0-5 ans, Caen, 5-10 ans, Le Havre, 10-18 ans, Rouen, 18-30 ans, Paris",
     required: true,
     horizontal: true,
@@ -137,15 +137,14 @@ const variant = {
 
 const instructions = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: '<p>Votre information est bien enregistré. </p><br>\
-  <p>Nous commençons un exercise à partir de maintenant.<br><br></p>\
-  Cliquez quelque touche à continuer.',
+  stimulus: '<p>Vos informations sont bien enregistrées. </p><br>\
+  <p>Avant de commencer, nous allons faire deux exercices.<br><br></p>\
+  Appuyez sur une touche de votre clavier.',
 };
 
 const instruction1 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p><strong>C'est une section que l'on faire des exercises pour l'expérimentation.</strong><br><br>\
-    Les instructions vont maintenant s'afficher et être diffusées vocalement.<br>\
+  stimulus: "<p><strong>Exercices d'entraînement.<br>\
     Veuillez suivre ces instructions pour sélectionner votre réponse.</p>",
   choices: ["J'ai compris"],
 };
@@ -172,8 +171,8 @@ Veuillez choisir l’option la plus naturelle pour vous.<br><br><br>\
 
 const excercise2 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
-  Veuillez choisir un de choix le plus naturel pour vous.<br><br><br>\
+  stimulus: "<p> Écoutez l'enregistrement et choisissez, parmi les propositions, celle qui convient pour remplir l'espace vide.\
+Veuillez choisir l’option la plus naturelle pour vous.<br><br><br>\
   <strong>L'Europe est un territoire conventionnellement.<br>\
   Clara vient de l'Europe. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_europe.wav'></audio>",
@@ -191,13 +190,13 @@ const excercise2 = {
 // Experiment Section.
 const instruction2 = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p> Voici la section consacrée à l'expérience proprement dite.</p> <br>"+
+  stimulus: "<p> Nous allons commencer l'expérience.</p> <br>"+
   "<p><strong>Comme lors de l'entraînement, veuillez choisir la réponse qui vous semble la plus naturelle.\
-  <span style = 'color: red;'>Notez que ça ne signifie pas l'option correcte. </span></strong><br>"+
-  "<p><strong>Veuillez écouter attentivement jusqu'au bout non seulement les instructions écrites, \
+  <span style = 'color: red;'>Ceci n'est pas un test de langue.</span></strong><br>"+
+  "<p><strong>Veuillez lire et écouter attentivement jusqu'au bout non seulement les instructions écrites, \
   mais aussi les instructions vocales avant de répondre.</strong></p><br>"+
   "<p><strong>Veuillez noter qu'une fois que vous avez appuyé sur le bouton, vous ne pouvez plus revenir en arrière.</strong></p><br>"+
-  "<p>Dans l'expérience qui va suivre, <strong>vous devrez créer de nouveaux mots à partir de mots qui n'existent pas.</strong><br>\
+  "<p>Dans l'expérience qui va suivre, <strong>vous devez choisir le gentilé (nom d'habitant)</strong><br>\
   Même s'ils n'existent pas réellement, <strong>faites comme s'ils existaient.</strong><br><br></p>",
 
 
@@ -299,7 +298,7 @@ const inst_test = {
 
 const item_list_1 = [{
   "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
-  Veuillez choisir un de choix le plus naturel pour vous. <br><br><br>\
+  Veuillez choisir celle qui vous semble la plus naturelle. <br><br><br>\
   <strong>Musième est une ville. Paul vient de Musième. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus1.wav'></audio>",
   "choices": ["1:Musiémien",
