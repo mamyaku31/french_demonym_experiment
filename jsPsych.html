@@ -39,7 +39,7 @@ const wavs = ['audio/fixed_paris.wav', 'audio/fixed_europe.wav', 'audio/fixed_st
 const preload = {
   type: jsPsychPreload,
   audio: wavs,
-  message: "Chargement en cours",
+  message: "État d'avancement",
 };
 
 const browser_check = {
@@ -232,9 +232,7 @@ const test = {
     {
       prompt: "Quels mots apparaissent lors de l'expérience et que faites-vous alors ?",
       options: ["Il faut mémoriser une liste de mots existants et les répéter.",
-        "Il faut traduire des mots du français vers une autre langue.",
-        "Il faut créer un nouveau mot à partir d’un mot qui n’existe pas.",
-        "Il faut corriger des erreurs dans des phrases existantes."],
+        "Il faut choisir nom d'habitants des options."],
       required: true,
       name: "nonce_understand",
     }],
@@ -299,12 +297,12 @@ const inst_test = {
 const item_list_1 = [{
   "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musième est une ville. Paul vient de Musième. Il est ___.</strong></p>\
+  <strong>Jumeume est une ville. Paul vient de Jumeume. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus1.wav'></audio>",
-  "choices": ["1:Musiémien",
-    "2:Musiémois",
-    "3:Musiémais",
-    "4:Musiéméen"],
+  "choices": ["1:Jumeumien",
+    "2:Jumeumois",
+    "3:Jumeumais",
+    "4:Jumeuméen"],
 
   data: {
     "seg": "m",
@@ -316,12 +314,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièpe est une ville. Clara vient de Musièpe. Elle est ___.</strong></p>\
+  <strong>Jumeupe est une ville. Clara vient de Jumeupe. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus2.wav'></audio>",
-    "choices": ["1:Musiépienne",
-      "2:Musiépoise",
-      "3:Musiépaise",
-      "4:Musiépéenne"],
+    "choices": ["1:Jumeupienne",
+      "2:Jumeupoise",
+      "3:Jumeupaise",
+      "4:Jumeupéenne"],
 
     data: {
       "seg": "p",
@@ -333,12 +331,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
  Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièbe est une ville. Jean vient de Musièbe. Il est ___.</strong></p>\
+  <strong>Jumeube est une ville. Jean vient de Jumeube. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus3.wav'></audio>",
-    "choices": ["1:Musiébien",
-      "2:Musiébois",
-      "3:Musiébais",
-      "4:Musiébéen"],
+    "choices": ["1:Jumeubien",
+      "2:Jumeubois",
+      "3:Jumeubais",
+      "4:Jumeubéen"],
 
     data: {
       "seg": "b",
@@ -350,12 +348,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
  Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièfe est une ville. Marie vient de Musièfe. Elle est ___.</strong></p>\
+  <strong>Jumeufe est une ville. Marie vient de Jumeufe. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus4.wav'></audio>",
-    "choices": ["1:Musièfienne",
-      "2:Musiéfoise",
-      "3:Musiéfaise",
-      "4:Musiéféenne"],
+    "choices": ["1:Jumeufienne",
+      "2:Jumeufoise",
+      "3:Jumeufaise",
+      "4:Jumeuféenne"],
 
     data: {
       "seg": "f",
@@ -367,12 +365,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musiève est une ville. Pierre vient de Musiève. Il est ___.</strong></p>\
+  <strong>Jumeuve est une ville. Pierre vient de Jumeuve. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus5.wav'></audio>",
-    "choices": ["1:Musiévien",
-      "2:Musiévois",
-      "3:Musiévais",
-      "4:Musiévéen"],
+    "choices": ["1:Jumeuvien",
+      "2:Jumeuvois",
+      "3:Jumeuvais",
+      "4:Jumeuvéen"],
 
     data: {
       "seg": "v",
@@ -384,12 +382,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musiène est une ville. Claire vient de Musiène. Elle est ___.</strong></p>\
+  <strong>Jumeune est une ville. Claire vient de Jumeune. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus6.wav'></audio>",
-    "choices": ["1:Musiénienne",
-      "2:Musiénoise",
-      "3:Musiénaise",
-      "4:Musiénéene"],
+    "choices": ["1:Jumeunienne",
+      "2:Jumeunoise",
+      "3:Jumeunaise",
+      "4:Jumeunéenne"],
 
     data: {
       "seg": "n",
@@ -401,12 +399,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musiète est une ville. Thomas vient de Musiète. Il est ___.</strong></p>\
+  <strong>Jumeute est une ville. Thomas vient de Jumeute. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus7.wav'></audio>",
-    "choices": ["1:Musiétien",
-      "2:Musiétois",
-      "3:Musiétais",
-      "4:Musiétéen"],
+    "choices": ["1:Jumeutien",
+      "2:Jumeutois",
+      "3:Jumeutais",
+      "4:Jumeutéen"],
 
     data: {
       "seg": "t",
@@ -418,12 +416,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musiède est une ville. Sophie vient de Musiède. Elle est ___.</strong></p>\
+  <strong>Jumeude est une ville. Sophie vient de Jumeude. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus8.wav'></audio>",
-    "choices": ["1:Musiédienne",
-      "2:Musiédoise",
-      "3:Musiédaise",
-      "4:Musiédéenne"],
+    "choices": ["1:Jumeudienne",
+      "2:Jumeudoise",
+      "3:Jumeudaise",
+      "4:Jumeudéenne"],
 
     data: {
       "seg": "d",
@@ -435,12 +433,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièsse est une ville. David vient de Musièsse. Il est ___.</strong></p>\
+  <strong>Jumeusse est une ville. David vient de Jumeusse. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus9.wav'></audio>",
-    "choices": ["1:Musiéssien",
-      "2:Musiéssois",
-      "3:Musiéssais",
-      "4:Musiésséen"],
+    "choices": ["1:Jumeussien",
+      "2:Jumeussois",
+      "3:Jumeussais",
+      "4:Jumeusséen"],
 
     data: {
       "seg": "s",
@@ -452,12 +450,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
  Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièse est une ville. Zoé vient de Musièse. Elle est ___.</strong></p>\
+  <strong>Jumeuse est une ville. Zoé vient de Jumeuse. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus10.wav'></audio>",
-    "choices": ["1:Musiésienne",
-      "2:Musiésoise",
-      "3:Musiésaise",
-      "4:Musiéséene"],
+    "choices": ["1:Jumeusienne",
+      "2:Jumeusoise",
+      "3:Jumeusaise",
+      "4:Jumeuséenne"],
 
     data: {
       "seg": "z",
@@ -469,12 +467,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièle est une ville. Gocé vient de Musièle. Il est ___.</strong></p>\
+  <strong>Jumeule est une ville. Gocé vient de Jumeule. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus11.wav'></audio>",
-    "choices": ["1:Musiélien",
-      "2:Musiélois",
-      "3:Musiélais",
-      "4:Musiéléen"],
+    "choices": ["1:Jumeulien",
+      "2:Jumeulois",
+      "3:Jumeulais",
+      "4:Jumeuléen"],
 
     data: {
       "seg": "l",
@@ -486,12 +484,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièche est une ville. Léa vient de Musièche. Elle est ___.</strong></p>\
+  <strong>Jumeuche est une ville. Léa vient de Jumeuche. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus12.wav'></audio>",
-    "choices": ["1:Musiéchienne",
-      "2:Musiéchoise",
-      "3:Musiéchaise",
-      "4:Musiéchéenne"],
+    "choices": ["1:Jumeuchienne",
+      "2:Jumeuchoise",
+      "3:Jumeuchaise",
+      "4:Jumeuchéenne"],
 
     data: {
       "seg": "S",
@@ -503,12 +501,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musiège est une ville. Benjamin vient de Musiège. Il est ___.</strong></p>\
+  <strong>Jumeuge est une ville. Benjamin vient de Jumeuge. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus13.wav'></audio>",
-    "choices": ["1:Musiégien",
-      "2:Musiégeois",
-      "3:Musiégeais",
-      "4:Musiégéen"],
+    "choices": ["1:Jumeugien",
+      "2:Jumeugeois",
+      "3:Jumeugeais",
+      "4:Jumeugéen"],
 
     data: {
       "seg": "Z",
@@ -520,12 +518,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièye est une ville. Gabrielle vient de Musièye. Elle est ___.</strong></p>\
+  <strong>Jumeuye est une ville. Gabrielle vient de Jumeuye. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus14.wav'></audio>",
-    "choices": ["1:Musiéyienne",
-      "2:Musiéyoise",
-      "3:Musiéyaise",
-      "4:Musiéyéenne"],
+    "choices": ["1:Jumeuyienne",
+      "2:Jumeuyoise",
+      "3:Jumeuyaise",
+      "4:Jumeuyéenne"],
 
     data: {
       "seg": "j",
@@ -537,12 +535,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musièque est une ville. Léon vient de Musièque. Il est ___.</strong></p>\
+  <strong>Jumeuque est une ville. Léon vient de Jumeuque. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus15.wav'></audio>",
-    "choices": ["1:Musiéquien",
-      "2:Musiéquois",
-      "3:Musiéquais",
-      "4:Musiéquéen"],
+    "choices": ["1:Jumeuquien",
+      "2:Jumeuquois",
+      "3:Jumeuquais",
+      "4:Jumeuquéen"],
 
     data: {
       "seg": "k",
@@ -554,12 +552,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musiègue est une ville. Julie vient de Musiègue. Elle est ___.</strong></p>\
+  <strong>Jumeugue est une ville. Julie vient de Jumeugue. Elle est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus16.wav'></audio>",
-    "choices": ["1:Musiéguienne",
-      "2:Musiégoise",
-      "3:Musiégaise",
-      "4:Musiéguéenne"],
+    "choices": ["1:Jumeuguienne",
+      "2:Jumeugoise",
+      "3:Jumeugaise",
+      "4:Jumeuguéenne"],
 
     data: {
       "seg": "g",
@@ -571,12 +569,12 @@ const item_list_1 = [{
   {
     "stimulus": "<p> Écoutez l'enregistrement et choisissez parmi les propositions celle qui convient pour remplir l'espace vide.<br>\
   Veuillez choisir l'option la plus naturelle selon vous parmi les choix. <br><br><br>\
-  <strong>Musière est une ville. Antoine vient de Musière. Il est ___.</strong></p>\
+  <strong>Jumeure est une ville. Antoine vient de Jumeure. Il est ___.</strong></p>\
   <audio id='audio_stim' src='audio/fixed_stimulus17.wav'></audio>",
-    "choices": ["1:Musiérien",
-      "2:Musiérois",
-      "3:Musiérais",
-      "4:Musiéréen"],
+    "choices": ["1:Jumeurien",
+      "2:Jumeurois",
+      "3:Jumeurais",
+      "4:Jumeuréen"],
 
     data: {
       "seg": "R",
