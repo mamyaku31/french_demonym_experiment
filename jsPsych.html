@@ -39,7 +39,7 @@ const wavs = ['audio/fixed_paris.wav', 'audio/fixed_europe.wav', 'audio/fixed_st
 const preload = {
   type: jsPsychPreload,
   audio: wavs,
-  message: "État d'avancement",
+  message: "Chargement en cours...",
 };
 
 const browser_check = {
@@ -138,7 +138,6 @@ const variant = {
 const instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: '<p>Vos informations sont bien enregistrées. </p><br>\
-  <p>Avant de commencer, nous allons faire deux exercices.<br><br></p>\
   Appuyez sur une touche de votre clavier.',
 };
 
@@ -232,7 +231,7 @@ const test = {
     {
       prompt: "Quels mots apparaissent lors de l'expérience et que faites-vous alors ?",
       options: ["Il faut mémoriser une liste de mots existants et les répéter.",
-        "Il faut choisir nom d'habitants des options."],
+        "Il faut sélectionner le nom d'un habitant dans la liste."],
       required: true,
       name: "nonce_understand",
     }],
@@ -241,7 +240,7 @@ const test = {
   on_finish: function(data) {
     testAccuracy += Number(data.response["audio_understand"] === "Il faut lire le texte et écouter l’enregistrement audio jusqu’à la fin avant de répondre.");
     testAccuracy += Number(data.response["task_understand"] === "Il faut choisir l’option qui vous semble la plus naturelle et appuyer sur le bouton pour valider votre réponse.");
-    testAccuracy += Number(data.response["nonce_understand"] === "Il faut créer un nouveau mot à partir d’un mot qui n’existe pas.");
+    testAccuracy += Number(data.response["nonce_understand"] === "Il faut sélectionner le nom d'un habitant dans la liste.");
     testAccuracy = testAccuracy / 3;
   },
 };
@@ -990,8 +989,8 @@ const timeline = [
   birthplace,
   variant,
   instructions,
-  instruction1,
   inst_test,
+  instruction1,
   exercise1,
   excercise2,
   Experiment_timeline,
