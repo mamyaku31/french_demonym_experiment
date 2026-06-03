@@ -21,8 +21,8 @@ Cette enquête est réalisée par **Mamoru Yakuwa**
 
 ## 2\. Conditions de participation
 
-* Pour participer à l'expérience, veuillez utiliser votre propre ordinateur. Afin d'éviter tout problème informatique, veuillez utiliser le navigateur
-Google Chrome.
+* Pour participer à l'expérience, veuillez utiliser **votre propre ordinateur**. Afin d'éviter tout problème informatique, veuillez utiliser le navigateur
+Google Chrome.　Si vous ne parvenez vraiment pas à utiliser Chrome, veuillez utiliser un autre navigateur.
 
 * Cette enquête s'adresse uniquement aux locuteurs de France métropolitaine ou du Canada dont le français est la langue maternelle.
 
