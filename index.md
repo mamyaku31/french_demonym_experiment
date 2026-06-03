@@ -26,8 +26,6 @@ Google Chrome.
 
 * Cette enquête s'adresse uniquement aux locuteurs de France métropolitaine ou du Canada dont le français est la langue maternelle.
 
-* Cette expérience s'inscrivant dans le cadre d'une étude préliminaire, veuillez noter que nous ne sommes pas en mesure de vous verser de rémunération.
-
 ## 3\. Collecte des données et protection des participants
 
 * La partitipation à cette enquête ne présente aucun risque ou préjudice physiques ou mentaux.
@@ -43,8 +41,6 @@ Google Chrome.
 * Le numéro de classement est attribué automatiquement par le programme à partir d'un générateur de nombres aléatoires. Vous n'avez pas besoin de le saisir.
 
 * Les participants ne peuvent être identifiés à partir du contenu de l'expérience.
-
-* Cette expérience a été approuvée par le comité d'éthique de la recherche de l'université Aoyama Gakuin, à laquelle appartient le chercheur. (numéro d'approbation du comité d'éthique: H26-009 )
 
 ## 4\. Publication des résultats de recherche
 
