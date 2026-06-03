@@ -968,6 +968,14 @@ const end_number = {
   response_ends_trial: true,
 };
 
+const ending_pilot = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<p>Merci d'avoir participé à cette expérience.<br>\
+  <span style='color: red;'>N'oubliez pas d'appuyer sur le bouton « Terminer l'expérience » !</span><br>\</p>",
+  choices: ["Terminer l'expérience"],
+  response_ends_trial: true,
+};
+
 const subject_id = jsPsych.randomization.randomID(10);
 const filename = `${subject_id}.csv`;
 
@@ -996,8 +1004,9 @@ const timeline = [
   Experiment_timeline,
   inst_liaison,
   Experiment_timeline_2,
-  goodbye,
-  end_number,
+  //goodbye,
+  //end_number,
+  ending_pilot,
   save_data,
 ];
 
