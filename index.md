@@ -8,7 +8,7 @@ Cette enquête est réalisée par **Mamoru Yakuwa**
 
 *Tokyo, Japon*
 
-**Contact** Pour toute question ou remarque, merci de contacter **myakuwa2005@gmail.com** 
+**Contact**: Pour toute question ou remarque, merci de contacter **myakuwa2005@gmail.com** 
  
 
 ---
@@ -44,7 +44,7 @@ Google Chrome.
 
 * Les participants ne peuvent être identifiés à partir du contenu de l'expérience.
 
-* Cette expérience a été approuvée par le comité d'éthique de la recherche de l'université Aoyama Gakuin, à laquelle appartient le responsable de l'expérience. (Numéro de d'approbation du comité d'éthique: H26-009)
+* Cette expérience a été approuvée par le comité d'éthique de la recherche de l'université Aoyama Gakuin, à laquelle appartient le responsable de l'expérience. (Numéro d'approbation du comité d'éthique: H26-009)
 
 ## 4\. Publication des résultats de recherche
 
