@@ -19,6 +19,8 @@ Cette enquête est réalisée par **Mamoru Yakuwa**
 
 * Cette expérience consiste à choisir l'option jugée la plus naturelle parmi quatre options proposées.
 
+* Cette expérience dure environ 15 minutes.
+
 ## 2\. Conditions de participation
 
 * Pour participer à l'expérience, veuillez utiliser **votre propre ordinateur**. Afin d'éviter tout problème informatique, veuillez utiliser le navigateur
