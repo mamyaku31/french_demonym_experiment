@@ -1,6 +1,6 @@
 #  Consentement éclairé 
 
-# Expérimentation sur la formation des gentilés
+# Expérience sur la formation des gentilés
 
 Cette enquête est réalisée par **Mamoru Yakuwa**
 
