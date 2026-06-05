@@ -8,7 +8,7 @@ Cette enquête est réalisée par **Mamoru Yakuwa**
 
 *Tokyo, Japon*
 
-**Contact**: Pour toute question ou remarque, merci de contacter **myakuwa2005@gmail.com** 
+**Contact**: Pour toute question ou remarque, merci de contacter **yakuwa.labphon@gmail.com** 
  
 
 ---
