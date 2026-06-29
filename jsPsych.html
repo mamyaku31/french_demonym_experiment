@@ -63,6 +63,21 @@ const welcome = {
   choices: ['Suivant'],
 };
 
+const gateway = {
+  type: jsPsychSurveyMultiChoice,
+  questions: [{
+    prompt: "Par quel lien avez-vous participé à cette expérience ?",
+    required: true,
+    horizontal: false,
+    name: "yourgateway",
+    options: ["J'ai reçu un lien d'un ami ou d'une connaissance et je me suis inscrit.",
+      "Expesciences du Relais d'Information sur les Sciences de la Cognition (RISC)",
+      "Reddit",
+      "Prolific",],
+  }],
+  button_label: "Suivant",
+};
+
 // Initializing global variable to store participant information
 window.participant_info = {};
 
@@ -984,7 +999,7 @@ const timeline = [
   preload,
   browser_check,
   welcome,
-  //gateway,
+  gateway,
   background,
   gender,
   birthplace,
