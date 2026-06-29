@@ -968,9 +968,10 @@ const Experiment_timeline_2 = {
 
 const redirect = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "<p>Je vous remercie pour votre participation</p>"+
-    "<p><a href="https://app.prolific.com/submissions/complete?cc=C15HZKNQ">Cliquez ici pour revenir sur Prolific et terminer l'étude.
-    </a></p>",
+  stimulus:
+  '<p>Je vous remercie pour votre participation</p>' +
+  '<p><a href="https://app.prolific.com/submissions/complete?cc=C15HZKNQ">' +
+  'Cliquez ici pour revenir sur Prolific et terminer l\'étude.</a></p>',
     choices: jsPsych.NO_KEYS
 };
 
@@ -1024,7 +1025,7 @@ const timeline = [
   Experiment_timeline,
   inst_liaison,
   Experiment_timeline_2,
-  //redirect,
+  redirect,
   //goodbye,
   //end_number,
   save_data,
